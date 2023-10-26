@@ -1,10 +1,10 @@
 import { View, Text, TouchableOpacity } from 'react-native'
 import React from 'react'
 import buttoncss from './buttoncss'
-import { useNavigation } from '@react-navigation/native'; // Import useNavigation hook
+import { useNavigation } from '@react-navigation/native'
 
 const Button = () => {
-  const navigation = useNavigation(); // Use the useNavigation hook to get the navigation object
+  const navigation = useNavigation(); 
 
   const handleprees = ()=>{
     
