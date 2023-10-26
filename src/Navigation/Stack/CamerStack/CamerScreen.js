@@ -1,14 +1,14 @@
 import { View, Text } from 'react-native'
 import React from 'react'
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import Detail from '../../../Page/Detail/Detail';
+import Camer from '../../../Page/Camer/Camer';
 const Stack = createNativeStackNavigator();
-const DetailScreen = () => {
+const CamerScreen = () => {
   return (
     <Stack.Navigator screenOptions={{ headerShown: false }} >
-    <Stack.Screen name="Detail" component={Detail} />
-</Stack.Navigator>
+      <Stack.Screen name="Camer" component={Camer} />
+    </Stack.Navigator>
   )
 }
 
-export default DetailScreen
+export default CamerScreen

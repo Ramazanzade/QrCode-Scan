@@ -3,7 +3,9 @@ import React from 'react'
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import HomeScreen from './src/Navigation/Stack/HomeStack/HomeScreen';
-import DetailScreen from './src/Navigation/Stack/DetailStack/DetailScreen';
+import CamerScreen from './src/Navigation/Stack/CamerStack/CamerScreen';
+import { Provider} from 'react-redux';
+import { store } from './src/Store/store';
 
 const Stack = createNativeStackNavigator();
 const App = () => {
@@ -11,10 +13,18 @@ const App = () => {
     <NavigationContainer>
     <Stack.Navigator screenOptions={{ headerShown: false }}>
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
-      <Stack.Screen name="DetailScreen" component={DetailScreen} />
+      <Stack.Screen name="CamerScreen" component={CamerScreen} />
     </Stack.Navigator>
   </NavigationContainer>
   )
 }
 
-export default App
+const BigApp = () => {
+  return (
+    <Provider store={store}>
+      <App />
+    </Provider>
+  )
+}
+
+export default BigApp;
